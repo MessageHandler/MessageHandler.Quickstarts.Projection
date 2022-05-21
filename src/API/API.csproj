@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>8a89e1d4-5317-47cc-9074-5c45574de9c0</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MessageHandler.Runtime.TransactionalProcessing" Version="4.0.0-beta8" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Projection\Projection.csproj" />
+    <ProjectReference Include="..\Contract\Contract.csproj" />
+	<PackageReference Include="MessageHandler.EventSourcing.AzureTableStorage" Version="4.0.0-beta4" />
+  </ItemGroup>
+
+</Project>
