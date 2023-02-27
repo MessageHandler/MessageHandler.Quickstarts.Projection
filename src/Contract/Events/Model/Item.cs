@@ -1,4 +1,4 @@
-﻿namespace MessageHandler.Samples.EventSourcing.Projection.Contract
+﻿namespace MessageHandler.Quickstart.Contract
 {
     public class Item
     {

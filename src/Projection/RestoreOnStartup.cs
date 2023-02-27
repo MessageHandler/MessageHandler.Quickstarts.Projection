@@ -1,4 +1,4 @@
-﻿using MessageHandler.EventSourcing.ProjectionRestoration;
+﻿using MessageHandler.EventSourcing.Projections;
 using Microsoft.Extensions.Hosting;
 
 namespace MessageHandler.Samples.EventSourcing.Projection
@@ -6,9 +6,9 @@ namespace MessageHandler.Samples.EventSourcing.Projection
     public class RestoreOnStartup : IHostedService
     {
         private readonly PurchaseOrdersRegistry _registry;
-        private readonly IExecuteProjections _projection;
+        private readonly IRestoreProjections<PurchaseOrdersRegistry> _projection;
 
-        public RestoreOnStartup(IExecuteProjections projection, PurchaseOrdersRegistry registry)
+        public RestoreOnStartup(IRestoreProjections<PurchaseOrdersRegistry> projection, PurchaseOrdersRegistry registry)
         {
             _registry = registry;
             _projection = projection;

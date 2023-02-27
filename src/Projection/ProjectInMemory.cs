@@ -1,5 +1,5 @@
 ﻿using MessageHandler.EventSourcing.Projections;
-using MessageHandler.Samples.EventSourcing.Projection.Contract;
+using MessageHandler.Quickstart.Contract;
 
 namespace MessageHandler.Samples.EventSourcing.Projection
 {

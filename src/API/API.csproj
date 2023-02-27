@@ -8,14 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MessageHandler.Runtime.TransactionalProcessing" Version="4.0.0-beta8" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+	<PackageReference Include="MessageHandler.Runtime" Version="4.0.0-beta16" />
+	<PackageReference Include="MessageHandler.EventSourcing.AzureTableStorage" Version="4.0.0-beta20" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Projection\Projection.csproj" />
-    <ProjectReference Include="..\Contract\Contract.csproj" />
-	<PackageReference Include="MessageHandler.EventSourcing.AzureTableStorage" Version="4.0.0-beta4" />
+    <ProjectReference Include="..\Contract\Contract.csproj" />	
   </ItemGroup>
 
 </Project>

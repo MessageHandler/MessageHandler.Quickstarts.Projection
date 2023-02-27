@@ -1,6 +1,6 @@
 ﻿using MessageHandler.EventSourcing.Contracts;
 
-namespace MessageHandler.Samples.EventSourcing.Projection.Contract
+namespace MessageHandler.Quickstart.Contract
 {
     public class PurchaseOrderBooked : SourcedEvent
     {
