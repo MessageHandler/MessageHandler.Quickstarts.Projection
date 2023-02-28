@@ -25,4 +25,8 @@
     <ProjectReference Include="..\ContractTests\ContractTests.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+	<PackageReference Include="MessageHandler.EventSourcing.Testing" Version="4.0.0-beta20" />
+  </ItemGroup>
+
 </Project>

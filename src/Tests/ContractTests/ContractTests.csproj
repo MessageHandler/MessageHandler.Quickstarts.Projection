@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -6,6 +6,12 @@
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
+
+    <ItemGroup>
+	    <Content Include=".verification\91d6950e-2ddf-4e98-a97c-fe5f434c13f0\verified.history.js.json">
+		    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	    </Content>
+    </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="6.5.1" />

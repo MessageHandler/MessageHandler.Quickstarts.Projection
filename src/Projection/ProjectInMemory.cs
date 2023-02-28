@@ -1,17 +1,15 @@
 ﻿using MessageHandler.EventSourcing.Projections;
 using MessageHandler.Quickstart.Contract;
 
-namespace MessageHandler.Samples.EventSourcing.Projection
+namespace MessageHandler.Quickstart.EventSourcing.Projection
 {
     public class ProjectInMemory:
-        IProjection<PurchaseOrdersRegistry, PurchaseOrderBooked>,
-        IProjection<PurchaseOrdersRegistry, BookingCancelled>,
-        IProjection<PurchaseOrdersRegistry, BookingConfirmed>
+        IProjection<PurchaseOrder, PurchaseOrderBooked>,
+        IProjection<PurchaseOrder, BookingCancelled>,
+        IProjection<PurchaseOrder, BookingConfirmed>
     {
-        public void Project(PurchaseOrdersRegistry registry, PurchaseOrderBooked msg)
+        public void Project(PurchaseOrder order, PurchaseOrderBooked msg)
         {
-            var order = registry.Get(msg.BookingId) ?? new PurchaseOrder() { BookingId = msg.BookingId };
-
             order.PurchaseOrderReference = msg.PurchaseOrderId;
             order.SellerReference = msg.SellerReference;
             order.BuyerReference = msg.BuyerReference;
@@ -32,28 +30,17 @@ namespace MessageHandler.Samples.EventSourcing.Projection
                         Value = ol.OrderedItem.Price.Value
                     }
                 }
-            }).ToList();
-           
-
-            registry.Index(order);
+            }).ToList();            
         }
 
-        public void Project(PurchaseOrdersRegistry registry, BookingCancelled msg)
+        public void Project(PurchaseOrder order, BookingCancelled msg)
         {
-            var order = registry.Get(msg.BookingId) ?? new PurchaseOrder() { BookingId = msg.BookingId };
-
             order.Status = "Cancelled";
-
-            registry.Index(order);
         }
 
-        public void Project(PurchaseOrdersRegistry registry, BookingConfirmed msg)
+        public void Project(PurchaseOrder order, BookingConfirmed msg)
         {
-            var order = registry.Get(msg.BookingId) ?? new PurchaseOrder() { BookingId = msg.BookingId };
-
             order.Status = "Confirmed";
-
-            registry.Index(order);
         }
     }
 }

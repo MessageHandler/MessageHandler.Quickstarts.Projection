@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace MessageHandler.Samples.EventSourcing.Projection.API
+namespace MessageHandler.Quickstart.EventSourcing.Projection.API
 {
     [ApiController]
     [Route("api")]

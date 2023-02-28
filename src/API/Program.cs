@@ -1,7 +1,7 @@
 using MessageHandler.Runtime;
 using MessageHandler.EventSourcing;
 using MessageHandler.EventSourcing.AzureTableStorage;
-using MessageHandler.Samples.EventSourcing.Projection;
+using MessageHandler.Quickstart.EventSourcing.Projection;
 
 var builder = WebApplication.CreateBuilder(args);
 

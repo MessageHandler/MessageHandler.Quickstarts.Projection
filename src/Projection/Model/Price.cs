@@ -1,4 +1,4 @@
-﻿namespace MessageHandler.Samples.EventSourcing.Projection
+﻿namespace MessageHandler.Quickstart.EventSourcing.Projection
 {
     public class Price
     {
