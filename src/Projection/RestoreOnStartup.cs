@@ -5,10 +5,10 @@ namespace MessageHandler.Quickstart.EventSourcing.Projection
 {
     public class RestoreOnStartup : IHostedService
     {
-        private readonly PurchaseOrdersRegistry _registry;
+        private readonly IPurchaseOrdersRegistry _registry;
         private readonly IRestoreProjections<PurchaseOrder> _projection;
 
-        public RestoreOnStartup(IRestoreProjections<PurchaseOrder> projection, PurchaseOrdersRegistry registry)
+        public RestoreOnStartup(IRestoreProjections<PurchaseOrder> projection, IPurchaseOrdersRegistry registry)
         {
             _registry = registry;
             _projection = projection;

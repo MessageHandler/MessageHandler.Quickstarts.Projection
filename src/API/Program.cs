@@ -18,7 +18,7 @@ var connectionString = configuration.GetValue<string>("azurestoragedata")
                                        ?? throw new Exception("No 'azurestoragedata' connection string was provided. Use User Secrets or specify via environment variable.");
 
 // Add services to the container.
-builder.Services.AddSingleton<PurchaseOrdersRegistry>();
+builder.Services.AddSingleton<IPurchaseOrdersRegistry, PurchaseOrdersRegistry>();
 builder.Services.AddSingleton<IHostedService, RestoreOnStartup>();
 builder.Services.AddMessageHandler(handlerName, runtimeConfiguration =>
 {

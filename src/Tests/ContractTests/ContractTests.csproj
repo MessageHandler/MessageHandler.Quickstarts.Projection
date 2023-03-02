@@ -11,6 +11,9 @@
 	    <Content Include=".verification\91d6950e-2ddf-4e98-a97c-fe5f434c13f0\verified.history.js.json">
 		    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	    </Content>
+	    <Content Include=".verification\c1a8b4a4-fac2-4ad6-a46a-243212f1363c\verified.history.js.json">
+		    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
     </ItemGroup>
 
   <ItemGroup>

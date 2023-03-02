@@ -10,7 +10,7 @@
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
 	<PackageReference Include="MessageHandler.Runtime" Version="4.0.0-beta16" />
-	<PackageReference Include="MessageHandler.EventSourcing.AzureTableStorage" Version="4.0.0-beta20" />
+	<PackageReference Include="MessageHandler.EventSourcing.AzureTableStorage" Version="4.0.0-beta21" />
   </ItemGroup>
 
   <ItemGroup>

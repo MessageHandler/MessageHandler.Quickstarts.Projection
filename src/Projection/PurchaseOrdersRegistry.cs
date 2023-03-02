@@ -2,7 +2,7 @@
 
 namespace MessageHandler.Quickstart.EventSourcing.Projection
 {
-    public class PurchaseOrdersRegistry
+    public class PurchaseOrdersRegistry : IPurchaseOrdersRegistry
     {
         private readonly ConcurrentDictionary<string, PurchaseOrder> _orders = new();
         private readonly ConcurrentDictionary<string, ConcurrentDictionary<string, PurchaseOrder>> _ordersBySeller = new();
