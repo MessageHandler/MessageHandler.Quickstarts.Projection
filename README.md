@@ -14,6 +14,14 @@ Projections derive the current state from an event stream.
 
 Use this pattern to turn an event stream into state that can be interpretted by users.
 
+## Scenario
+
+The scenario for this quickstart populates PurchaseOrder objects from events in the OrderBooking stream (the events emitted by the aggregate root quickstart).
+
+There are 2 options here:
+- The 'prerestored' option reads the objects restored at startup.
+- The 'onthefly' option projects them during the request.
+
 ## What you need to get started
 
 - The [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download) should be installed
